@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+}
+
+.simulador {
+  margin-top: 100px;
+}
+.simulador .info {
+  display: flex;
+  flex-direction: column;
+}
+.simulador .info .campos {
+  margin: 10px 10px;
+  width: 290px;
+}
+.simulador .info .campos label {
+  font-size: 20px;
+}
+.simulador .info .campos input {
+  margin-top: 5px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.simulador .info .simular {
+  width: 300px;
+  margin: 10px 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.return {
+  padding: 10px;
+  position: absolute;
+  bottom: 100px;
+  left: 500px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+  width: 300px;
+}/*# sourceMappingURL=main.css.map */

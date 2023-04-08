@@ -1,0 +1,44 @@
+@import 'base';
+header{
+    text-align: center;    
+}
+.simulador{
+    margin-top: 100px;
+    .info{
+        display: flex;
+        flex-direction: column;
+        .campos{
+            margin: 10px 10px;
+            width: 290px;
+            label{
+               font-size: 20px; 
+            }
+            input{
+                margin-top: 5px;
+                width: 300px;
+                padding: 10px;
+                border-radius: 10px;
+            }
+        }
+        .simular{
+            width: 300px;
+            margin: 10px 10px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 20px;
+        }
+    }
+
+}
+.return{
+    padding: 10px;
+    position: absolute;
+    bottom: 100px;
+    left: 500px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+    width: 300px;
+}
