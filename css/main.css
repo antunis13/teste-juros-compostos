@@ -6,10 +6,12 @@
 
 header {
   text-align: center;
+  margin-top: 50px;
 }
 
 .simulador {
-  margin-top: 100px;
+  margin-top: 40px;
+  margin-left: 450px;
 }
 .simulador .info {
   display: flex;
@@ -27,6 +29,16 @@ header {
   width: 300px;
   padding: 10px;
   border-radius: 10px;
+}
+.simulador .info .campos input.error {
+  border: 1px solid red;
+}
+.simulador .info .campos input.succes {
+  border: 1px solid green;
+}
+.simulador .info .campos .errorSpan {
+  color: red;
+  font-size: 12px;
 }
 .simulador .info .simular {
   width: 300px;
@@ -47,4 +59,18 @@ header {
   font-size: 20px;
   padding: 10px;
   width: 300px;
+}
+
+.secondPage {
+  margin-top: 100px;
+  margin-left: 270px;
+}
+.secondPage h2 {
+  font-size: 30px;
+}
+.secondPage .hidden {
+  display: none;
+}
+.secondPage .hidden.show {
+  display: block;
 }/*# sourceMappingURL=main.css.map */

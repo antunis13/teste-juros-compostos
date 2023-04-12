@@ -1,15 +1,18 @@
 
-
 const botaoSimular = document.querySelector('#simular')
+
+
 botaoSimular.onclick = () =>{
-    const simulador = document.querySelector('.simulador')
-    const inputNome = document.querySelector('#nome')
-    const nome = inputNome.value
     const mensalidade = document.querySelector('#mensalidade').value
-    const contribuicao = document.querySelector('#contribuicao').value
+    const tempo = document.querySelector('#contribuicao').value
     const juros = document.querySelector('#juros').value
     const jurosDecimal = parseFloat(juros.replace(",",".").replace("%","")/100)
-    const expression = {expr:`${mensalidade}*(((1 +${jurosDecimal})^${contribuicao}-1)/${jurosDecimal})`}
+    let convert
+    for(let i =1; i <= tempo.length; i++){
+        i = 12
+        convert = i * tempo
+    }
+    const expression = {expr:`${mensalidade}*(((1 +${jurosDecimal})^${convert}-1)/${jurosDecimal})`}
     const jsonExpr = JSON.stringify(expression.expr)
     
     const showResult = (response) =>{
@@ -17,10 +20,17 @@ botaoSimular.onclick = () =>{
         const resultado = response.result
         const valor = parseFloat(resultado)
         const valorFormatado = valor.toFixed(2)
-
+        const simulador = document.querySelector('.simulador')
+        const inputNome = document.querySelector('#nome')
+        const nome = inputNome.value
         simulador.style.display = 'none'
-
-        secondPage.innerHTML = `<p> Olá ${nome}, juntando R$ ${mensalidade} todo mes, você terá R$ ${valorFormatado} em ${contribuicao} meses ` 
+    
+        secondPage.innerHTML = `<h2> Olá ${nome}, juntando R$ ${mensalidade} todo mes, você terá R$ ${valorFormatado} em ${tempo} anos </h2>
+        
+        <form action="/index.html">
+        <button class="return">Simular Novamente</button>
+        </form>
+        ` 
     }
     const config = {
         method: "POST",
@@ -37,4 +47,3 @@ botaoSimular.onclick = () =>{
     query() 
 }
   
-
