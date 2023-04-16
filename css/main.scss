@@ -6,6 +6,9 @@ header{
 .simulador{
     margin-top: 40px;
     margin-left:450px;
+    &.hidden{
+        display: none;
+    }
     .info{
         display: flex;
         flex-direction: column;

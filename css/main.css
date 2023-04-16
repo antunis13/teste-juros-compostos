@@ -13,6 +13,9 @@ header {
   margin-top: 40px;
   margin-left: 450px;
 }
+.simulador.hidden {
+  display: none;
+}
 .simulador .info {
   display: flex;
   flex-direction: column;
